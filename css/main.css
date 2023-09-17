@@ -1,0 +1,151 @@
+/* Global rules */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+.main-section {
+    height: 100vh;
+    position: relative;
+}
+.box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: s;
+    height: 420px;
+    width: 600px;
+}
+/* left side */
+.left {
+    flex-basis:50%;
+    background: linear-gradient(0deg, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.left p:first-child {
+    font-size: 18px;
+    color: hsl(241, 100%, 89%);
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+.left p:nth-child(3) {
+    margin: 20px 0 0 0;
+    font-weight: 800;
+    font-size: 25px;
+    color: hsl(221, 100%, 96%);
+}
+.left p:last-child {
+    margin: 0;
+    padding: 20px;
+    font-size: 16px;
+    color: hsl(241, 100%, 89%);
+}
+.left .circul {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    text-align: center;
+}
+.left .circul h1 {
+    color: hsl(221, 100%, 96%);
+    margin: 50px 0 0 0;
+    font-size: 50px;
+    font-weight: 800;
+}
+.left .circul p {
+    padding: 0;
+    color: hsla(222, 100%, 96%, 0.268);
+}
+/* right side */
+.right {
+    flex-basis: 50%;
+    padding: 5px 30px;
+    max-height: 100%;
+}
+.right p:first-child {
+    color: hsl(224, 30%, 27%);
+    font-size: 20px;
+}
+.right .note {
+    display: flex;
+    position: relative;
+    margin: 0 0 15px 0;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.right .note img {
+    margin-right: 10px;
+}
+.right .n1 {
+    background-color: hsla(0, 100%, 67%, 0.08);
+}
+.right .n2 {
+    background-color: hsl(39, 100%, 56%, 0.08);
+}
+.right .n3 {
+    background-color: hsl(166, 100%, 37%, 0.08);
+}
+.right .n4 {
+    background-color: hsl(234, 85%, 45%, 0.08);
+}
+div.note.n1 p:nth-of-type(1) {
+    color: hsla(0, 100%, 67%);
+}
+div.note.n2 p:nth-of-type(1) {
+    color: hsl(39, 100%, 56%);
+}
+div.note.n3 p:nth-of-type(1) {
+    color: hsl(166, 100%, 37%);
+}
+div.note.n4 p:nth-of-type(1) {
+    color: hsl(234, 85%, 45%);
+}
+div.note p:nth-of-type(2) {
+    position: absolute;
+    right: 10px;
+}
+.note span {
+    color: hsl(224, 30%, 27%);
+}
+.right button {
+    background-color: hsl(224, 30%, 27%);
+    border-style: none;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.right button:hover {
+    background: linear-gradient(180deg, hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+}
+/* media query */
+@media (max-width: 375px) {
+    .main-section {
+        padding: 0;
+        margin:0;
+    }
+    .box {
+        flex-direction:column;
+        max-width:100%;
+        top:0;
+        left:0;
+        transform:translate(0,0);
+    }
+    .left {
+        border-top-left-radius:0;
+        border-top-right-radius:0;
+    }
+}
